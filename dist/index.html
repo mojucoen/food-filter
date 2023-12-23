@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <meta charset="utf-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <title>Wonders Bucket List</title>
+    <meta name=" viewport" content="width=device-width, initial-scale=1.0, shrink-to-fit=no">
+    <link rel="stylesheet" type="text/css" media="screen" href="style.css" />
+
+    <link href="https://fonts.googleapis.com/css?family=PT+Sans" rel="stylesheet">
+    <script src="../bootstrap450/js/jquery-3.5.1.slim.min.js" defer></script>
+    <script src="../bootstrap450/js/popper.min.js" defer></script>
+    <script src="../bootstrap450/js/bootstrap.min.js" defer></script>
+    <link rel="stylesheet" type="text/css" href="../bootstrap450/css/bootstrap.min.css" />
+
+</head>
+
+<body>
+    <div id="search-food">
+        <input type="text" id="Key-Food" placeholder="Enter kind of food" />
+        <button class="btn btn-sm btn-primary" onclick=getData()>Search</button>
+        <div>
+            <input type="checkbox" id="dairyIngredients" name="dairyIngredients">
+            <label for="dairyIngredients"> Dairy</label><br>
+        </div>
+        <div>
+            <input type="checkbox" id="glutenIngredients" name="glutenIngredients">
+            <label for="glutenIngredients "> Gluten</label><br>
+        </div>
+    </div>
+
+    <div id="wonders" class="col-xs-12 col-md-3"></div>
+
+    <script id="wonders-template" type="text/x-handlebars-template">
+        {{#each wonders}}
+        <div id="{{idMeal}}" class="wonder">
+            <p class="name">{{title}} </p>
+            <img id="img" src="{{thumbnail}}" alt="Italian Trulli" onclick="Alert(this)">
+            <ul>
+
+                {{#each ingredients}}
+                <li> {{this}}</li>
+                {{/each}}
+            </ul>
+
+        </div>
+
+        {{/each}}
+
+    </script>
+
+    <script src="./jquery/dist/jquery.js"></script>
+    <script src="./handlebars/dist/handlebars.js"></script>
+    <script src="main.js"></script>
+</body>
+
+</html>
