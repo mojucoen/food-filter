@@ -23,13 +23,25 @@ body {
     grid-template-columns: repeat(3, 3fr);
 }
 
+ul {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    float: left;
+}
+
 .wonder {
     /* align-content: center; */
     display: grid;
-    grid-template-columns: 10fr 2fr;
     padding: 1vmax;
     border-radius: 4px;
     box-shadow: 1px 1px 3px black;
+    float: left;
+}
+
+.button {
+    width: fit-content;
+    height: fit-content;
+    padding: 3px;
 }
 
 .name {

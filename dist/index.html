@@ -9,10 +9,10 @@
     <link rel="stylesheet" type="text/css" media="screen" href="style.css" />
 
     <link href="https://fonts.googleapis.com/css?family=PT+Sans" rel="stylesheet">
-    <script src="../bootstrap450/js/jquery-3.5.1.slim.min.js" defer></script>
-    <script src="../bootstrap450/js/popper.min.js" defer></script>
-    <script src="../bootstrap450/js/bootstrap.min.js" defer></script>
-    <link rel="stylesheet" type="text/css" href="../bootstrap450/css/bootstrap.min.css" />
+    <!-- <script src="../server/node_modules/bootstrap/dist/js/jquery-3.5.1.slim.min.js" defer></script>
+    <script src="../server/node_modules/bootstrap/dist/js/popper.min.js" defer></script>
+    <script src="../server/node_modules/bootstrap/dist/js/bootstrap.min.js" defer></script>
+    <link rel="stylesheet" type="text/css" href="../server/node_modules/bootstrap/dist/css/bootstrap.min.css" /> -->
 
 </head>
 
@@ -30,7 +30,7 @@
         </div>
     </div>
 
-    <div id="wonders" class="col-xs-12 col-md-3"></div>
+    <div id="wonders"></div>
 
     <script id="wonders-template" type="text/x-handlebars-template">
         {{#each wonders}}
@@ -43,16 +43,19 @@
                 <li> {{this}}</li>
                 {{/each}}
             </ul>
-
+            <button id="{{href}}" class="button" onclick=getEmail(this)>Email us</button>
         </div>
 
         {{/each}}
 
     </script>
-
     <script src="./jquery/dist/jquery.js"></script>
     <script src="./handlebars/dist/handlebars.js"></script>
+    <script src="rendrer.js"></script>
+
+    <script src="control.js"></script>
     <script src="main.js"></script>
+
 </body>
 
 </html>
